@@ -13,7 +13,6 @@
         'security/project_ir_rules.xml',
         'security/ir.model.access.csv',
     ],
-    'uninstall_hook': 'uninstall_hook',
     'installable': True,
     'application': False,
 }
