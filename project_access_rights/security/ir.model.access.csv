@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_project_config_reporting,access_project_config_reporting,project.model_project_project,project_access_rights.group_project_config_reporting,1,1,1,1

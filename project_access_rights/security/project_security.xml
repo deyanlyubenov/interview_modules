@@ -1,0 +1,6 @@
+<odoo>
+    <record id="group_project_config_reporting" model="res.groups">
+        <field name="name">Project config and reporting</field>
+        <field name="category_id" ref="base.module_category_services_project"/>
+    </record>
+</odoo>
