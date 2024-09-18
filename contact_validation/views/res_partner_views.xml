@@ -1,0 +1,73 @@
+<odoo>
+    <data>
+        <record id="view_partner_form_validation" model="ir.ui.view">
+            <field name="name">res.partner.form.validation</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='alert alert-warning oe_edit_only']" position="after">
+                    <header>
+                        <button name="action_request_validation" type="object" string="Request Validation"
+                                states="new" class="oe_highlight"/>
+                        <button name="action_no_validation_needed" type="object" string="No Validation Needed"
+                                groups="contact_validation.group_contact_validator" states="new"/>
+                        <button name="action_validate" type="object" string="Validate"
+                                groups="contact_validation.group_contact_validator" states="to_validate"/>
+                        <button name="action_reject" type="object" string="Reject"
+                                groups="contact_validation.group_contact_validator" states="to_validate"/>
+                        <field name="state" widget="statusbar" statusbar_visible="new,to_validate,validated"/>
+                    </header>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_move_form" model="ir.ui.view">
+            <field name="name">account.move.form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="attributes">
+                    <attribute name="domain">[('state', '=', 'validated')]</attribute>
+                    <attribute name="options">{'no_create': True, 'no_quick_create': True}</attribute>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_order_form" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="attributes">
+                    <attribute name="domain">[('state', '=', 'validated')]</attribute>
+                    <attribute name="options">{'no_create': True, 'no_quick_create': True}</attribute>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_purchase_order_form" model="ir.ui.view">
+            <field name="name">purchase.order.form.inherit</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="attributes">
+                    <attribute name="domain">[('state', '=', 'validated')]</attribute>
+                    <attribute name="options">{'no_create': True, 'no_quick_create': True}</attribute>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_partner_search_validation" model="ir.ui.view">
+            <field name="name">res.partner.search.validation</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <search>
+                    <filter name="val_new" string="New" domain="[('state','=','new')]"/>
+                    <filter name="val_to_val" string="To be validated" domain="[('state','=','to_validate')]"/>
+                    <filter name="val_val" string="Validated" domain="[('state','=','validated')]"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>
