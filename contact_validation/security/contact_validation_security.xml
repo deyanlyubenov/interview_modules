@@ -3,7 +3,6 @@
         <field name="name">Contact Validator</field>
     </record>
 
-    <!-- Ensure only the 'Contact Validator' group can validate contacts -->
     <record id="contact_validator_access" model="ir.model.access">
         <field name="name">contact_validator_access</field>
         <field name="model_id" ref="base.model_res_partner"/>
