@@ -1,7 +1,7 @@
 {
     'name': 'Contact Validation',
     'version': '16.0.0.0',
-    'depends': ['base', 'account'],
+    'depends': ['base', 'account', 'sale', 'purchase'],
     'category': 'Customizations',
     'author': 'Deyan Lyubenov',
     'summary': 'Add validation process for contacts',

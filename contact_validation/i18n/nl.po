@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0beta\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-01 10:23+0000\n"
+"PO-Revision-Date: 2023-10-02 05:46+0000\n"
+"Last-Translator: Deyan Lyubenov, 2023\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: contact_validation
+#: model:ir.model.fields.selection,name:contact_validation.selection__res_partner__state__new
+msgid "Concept"
+msgstr "Nieuw"
+
+#. module: contact_validation
+#: model:ir.model.fields.selection,name:contact_validation.selection__res_partner__state__to_validate
+msgid "To be validated"
+msgstr "Te valideren"
+
+#. module: contact_validation
+#: model:ir.model.fields.selection,name:contact_validation.selection__res_partner__state__validated
+msgid "Validated"
+msgstr "Gevalideerd"
+
+#. module: contact_validation
+#: model_terms:ir.ui.view,arch_db:contact_validation.view_partner_form_validation
+msgid "Request Validation"
+msgstr "Validatie aanvragen"
+
+#. module: contact_validation
+#: model_terms:ir.ui.view,arch_db:contact_validation.view_partner_form_validation
+msgid "No Validation Needed"
+msgstr "Geen validatie nodig"
+
+#. module: contact_validation
+#: model_terms:ir.ui.view,arch_db:contact_validation.view_partner_form_validation
+msgid "Validate"
+msgstr "Valideer"
+
+#. module: contact_validation
+#: model_terms:ir.ui.view,arch_db:contact_validation.view_partner_form_validation
+msgid "Reject"
+msgstr "Afwijzen"

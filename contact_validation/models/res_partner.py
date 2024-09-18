@@ -4,7 +4,7 @@ class ResPartner(models.Model):
     _inherit = 'res.partner'
 
     state = fields.Selection([
-        ('new', 'New'),
+        ('new', 'Concept'),
         ('to_validate', 'To be validated'),
         ('validated', 'Validated')
     ], string='State', default='new', required=True, tracking=True)
